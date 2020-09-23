@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+    var docPluginInfos = DemoWeb.Models.DocPluginManager.PluginInfos;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    DocPlugin 清單：
+    <ul> 
+        @foreach (var keyVal in docPluginInfos)
+        {
+        <li>@keyVal.Key (@keyVal.Value)</li>
+        }
+    </ul>
+</body>
+</html>
