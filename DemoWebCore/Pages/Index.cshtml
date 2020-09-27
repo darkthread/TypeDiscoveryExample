@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@inject Models.DocPluginManager manager
+@{
+    ViewData["Title"] = "Home page";
+    var docPluginInfos = manager.PluginInfos;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    DocPlugin 清單：
+    <ul>
+        @foreach (var keyVal in docPluginInfos)
+        {
+            <li>@keyVal.Key (@keyVal.Value)</li>
+        }
+    </ul>
+
+</div>

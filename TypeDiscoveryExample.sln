@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoJsonPlugin", "DemoJsonP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoXmlPlugin", "DemoXmlPlugin\DemoXmlPlugin.csproj", "{52C163F7-BC38-4978-B5A8-3BB3F61E28AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWebCore", "DemoWebCore\DemoWebCore.csproj", "{9C761129-57D3-4241-BBAE-A3BFF00409A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{52C163F7-BC38-4978-B5A8-3BB3F61E28AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52C163F7-BC38-4978-B5A8-3BB3F61E28AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52C163F7-BC38-4978-B5A8-3BB3F61E28AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C761129-57D3-4241-BBAE-A3BFF00409A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C761129-57D3-4241-BBAE-A3BFF00409A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C761129-57D3-4241-BBAE-A3BFF00409A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C761129-57D3-4241-BBAE-A3BFF00409A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

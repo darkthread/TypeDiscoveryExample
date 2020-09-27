@@ -115,14 +115,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DemoJsonPlugin\DemoJsonPlugin.csproj">
-      <Project>{6e74e1c6-ef84-4ce0-afd6-df70306e5e00}</Project>
-      <Name>DemoJsonPlugin</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DemoXmlPlugin\DemoXmlPlugin.csproj">
-      <Project>{52c163f7-bc38-4978-b5a8-3bb3f61e28aa}</Project>
-      <Name>DemoXmlPlugin</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PluginModule\PluginModule.csproj">
       <Project>{992DB44C-A7D7-4015-BAB3-E0C19811775C}</Project>
       <Name>PluginModule</Name>
@@ -159,6 +151,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(SolutionDir)PluginDlls\*Plugin.dll" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

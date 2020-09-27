@@ -3,13 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Hosting;
 
 namespace DemoWeb.Models
 {
     public static class DocPluginManager
     {
-        static Dictionary<string, IDocPlugin> plugins = 
-            new PluginManager(AppDomain.CurrentDomain).Plugins;
+        static Dictionary<string, IDocPlugin> plugins =
+            new PluginManager(HostingEnvironment.MapPath("~/bin")).Plugins;
+            //new PluginManager(AppDomain.CurrentDomain).Plugins;
 
         public static Dictionary<string, string> PluginInfos =
             plugins.ToDictionary(o => o.Key, o => o.Value.Version);
